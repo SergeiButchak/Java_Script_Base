@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 6</h1>
+    <p>Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. 
+        В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).</p>
+    <pre>
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'sum':
+                    return a + b;
+                    break;
+                case 'sub':
+                    return a - b;
+                    break;
+                case 'mul':
+                    return a * b;
+                    break;
+                case 'div':
+                    return a / b;
+                    break;
+                default:
+                    return NaN;
+            }
+        }
+        var a = 54;
+        var b = 32;
+        document.write(`${a} + ${b} = ${mathOperation(a, b, 'sum')}&ltbr&gt`)
+        document.write(`${a} - ${b} = ${mathOperation(a, b, 'sub')}&ltbr&gt`)
+        document.write(`${a} * ${b} = ${mathOperation(a, b, 'mul')}&ltbr&gt`)
+        document.write(`${a} / ${b} = ${mathOperation(a, b, 'div')}&ltbr&gt`)
+        document.write(`${a} ^ ${b} = ${mathOperation(a, b, 'pow')}&ltbr&gt`)
+    </pre>
+    <p>Ответ:</p>
+    <script async>
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'sum':
+                    return a + b;
+                    break;
+                case 'sub':
+                    return a - b;
+                    break;
+                case 'mul':
+                    return a * b;
+                    break;
+                case 'div':
+                    return a / b;
+                    break;
+                default:
+                    return NaN;
+            }
+        }
+        var a = 54;
+        var b = 32;
+        document.write(`${a} + ${b} = ${mathOperation(a, b, 'sum')}<br>`)
+        document.write(`${a} - ${b} = ${mathOperation(a, b, 'sub')}<br>`)
+        document.write(`${a} * ${b} = ${mathOperation(a, b, 'mul')}<br>`)
+        document.write(`${a} / ${b} = ${mathOperation(a, b, 'div')}<br>`)
+        document.write(`${a} ^ ${b} = ${mathOperation(a, b, 'pow')}<br>`)
+     </script>   
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 1</h1>
+    <p>1. Дан код:</p>
+    <pre>
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2
+        d = b++; alert(d);           // 1
+        c = (2+ ++a); alert(c);      // 5
+        d = (2+ b++); alert(d);      // 4
+        alert(a);                    // 3
+        alert(b);                    // 3
+            
+    </pre>
+    <p>Почему код даёт именно такие результаты?</p>
+    <pre>
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // исходное значение a = 1, при прединкременте сначала увеличиваем a на 1, после этого a = 2, затем текущее значение a сохраняем в с = 2 
+        d = b++; alert(d);           // исходное значение b = 1, при постинкременте сначала копируем значение b в d = 1, потом увеличиваем b на 1, после этого b = 2, d = 1 
+        c = (2+ ++a); alert(c);      // после предыдущих манипуляций a = 2, увеличиваем a на 1, a = 3, прибавляем 2 и сохраняем в с = 5
+        d = (2+ b++); alert(d);      // после предыдущих манипуляций b = 2,прибавляем 2 и сохраняем в d = 4, увеличиваем b на 1, b = 3, 
+        alert(a);                    // 3
+        alert(b);                    // 3
+            
+    </pre>
+</body>
+</html>

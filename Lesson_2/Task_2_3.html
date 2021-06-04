@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 3</h1>
+    <p>3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу: <br>
+        если a и b положительные, вывести их разность; <br>
+        если а и b отрицательные, вывести их произведение; <br>
+        если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.</p>
+    <pre>
+        var a;
+        var b;
+ 
+        a = parseInt(prompt('Введите число a'));
+        b = parseInt(prompt('Введите число b'));
+        
+        if (a >= 0 && b >= 0) {
+            document.write(`Оба числа положительны, ${a} - ${b} = ${a - b}`)
+        }
+        else if (a < 0 && b < 0) {
+            document.write(`Оба числа отрициетльны, ${a} * ${b} = ${a * b}`)
+        }
+        else {
+            document.write(`Числа с разными знаками, (${a}) + (${b}) = ${a + b}`)
+        }
+        document.write(x);
+    </pre>
+    <p>Ответ:</p>
+    <script async>
+        var a;
+        var b;
+ 
+        a = parseInt(prompt('Введите число a'));
+        b = parseInt(prompt('Введите число b'));
+        
+        if (a >= 0 && b >= 0) {
+            document.write(`Оба числа положительны, ${a} - ${b} = ${a - b}`)
+        }
+        else if (a < 0 && b < 0) {
+            document.write(`Оба числа отрициетльны, ${a} * ${b} = ${a * b}`)
+        }
+        else {
+            document.write(`Числа с разными знаками, (${a}) + (${b}) = ${a + b}`)
+        }
+        document.write(x);
+    </script>   
+</body>
+</html>
