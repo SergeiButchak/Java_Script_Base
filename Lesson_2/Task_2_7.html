@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 7</h1>
+    <p>7. *Сравнить null и 0. Попробуйте объяснить результат. </p>
+    <pre>
+        document.write(`null &lt 0 - ${null &lt 0}&ltbr&gt`);
+        document.write(`null &gt= 0 - ${null &gt= 0}&ltbr&gt`);
+        document.write(`null == 0 - ${null == 0}&ltbr&gt`);
+        Причина в том, что нестрогое равенство и сравнения &gt &lt &gt= &lt= работают по-разному. 
+        Сравнения преобразуют null в число, рассматривая его как 0. Поэтому выражение (2) null >= 0 истинно, а null > 0 ложно.
+        С другой стороны, для нестрогого равенства == значений undefined и null действует особое правило: эти значения ни к чему не приводятся, 
+        они равны друг другу и не равны ничему другому. Поэтому (3) null == 0 ложно.
+    </pre>
+    <p>Ответ:</p>
+    <script async>
+        document.write(`null < 0 - ${null < 0}<br>`);
+        document.write(`null >= 0 - ${null >= 0}<br>`);
+        document.write(`null == 0 - ${null == 0}<br>`);
+    </script>   
+</body>
+</html>

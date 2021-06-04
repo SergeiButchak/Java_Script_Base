@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 5</h1>
+    <p>Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.</p>
+    <pre>
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function mul(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+
+        var a = 5;
+        var b = 3;
+        document.write(`${a} + ${b} = ${sum(a, b)}&ltbr&gt`);
+        document.write(`${a} - ${b} = ${sub(a, b)}&ltbr&gt`);
+        document.write(`${a} * ${b} = ${mul(a, b)}&ltbr&gt`);
+        document.write(`${a} / ${b} = ${div(a, b)}&ltbr&gt`);        
+    </pre>
+    <p>Ответ:</p>
+    <script async>
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function mul(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+
+        var a = 5;
+        var b = 3;
+        document.write(`${a} + ${b} = ${sum(a, b)}<br>`);
+        document.write(`${a} - ${b} = ${sub(a, b)}<br>`);
+        document.write(`${a} * ${b} = ${mul(a, b)}<br>`);
+        document.write(`${a} / ${b} = ${div(a, b)}<br>`);
+    </script>   
+</body>
+</html>
