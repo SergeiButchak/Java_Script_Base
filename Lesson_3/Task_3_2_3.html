@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 2, 3</h1>
+    <p>2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. 
+        Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+        3. Товары в корзине хранятся в массиве. Задачи:
+        a) Организовать такой массив для хранения товаров в корзине;
+        b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.</p>
+    <pre>
+        // для хранени данных о товаре будем использовать массив из трех элементов, хранящих "название", "стоимость" и "количество"
+        function countBasketPrice(cart) {
+            res = 0;
+            for (i = 0; i &lt; cart.length; i++)
+                res += cart[i][1] * cart[i][2];
+            
+            return res;
+         }
+        let shopCart = [
+            ["Good1", 452, 3],
+            ["Good2", 238, 5],
+            ["Good3", 512, 2],
+            ["Good5", 789, 1],
+            ["Good6", 100, 13],
+            ["Good7", 75, 27]
+        ];
+        for (i = 0; i &lt; shopCart.length; i++)
+            document.write(`${shopCart[i]}&lt;br&gt;`);
+        document.write("&lt;br&gt;");
+        document.write("Итого:");
+        document.write("&lt;br&gt;");
+        document.write(countBasketPrice(shopCart));
+    </pre>
+    <p>Результат:</p>
+    <script>
+       // для хранени данных о товаре будем использовать массив из трех элементов, хранящих "название", "стоимость" и "количество"
+        function countBasketPrice(cart) {
+            res = 0;
+            for (i = 0; i < cart.length; i++)
+                res += cart[i][1] * cart[i][2];
+            
+            return res;
+         }
+        let shopCart = [
+            ["Good1", 452, 3],
+            ["Good2", 238, 5],
+            ["Good3", 512, 2],
+            ["Good5", 789, 1],
+            ["Good6", 100, 13],
+            ["Good7", 75, 27]
+        ];
+        for (i = 0; i < shopCart.length; i++)
+            document.write(`${shopCart[i]}<br>`);
+        document.write("<br>");
+        document.write("Итого:");
+        document.write("<br>");
+        document.write(countBasketPrice(shopCart));
+    </script>
+</body>
+</html> 

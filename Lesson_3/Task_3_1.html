@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 1</h1>
+    <p>1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.</p>
+    <pre>
+        let number = 2;
+        while (number &lt;= 100) {
+            let num = 2;
+            let res = true;
+            while (num &lt; number) {
+                if (number % num == 0) {
+                    res = false;
+                    break;
+                }
+                num++;
+            }
+            if (res)
+                document.write(`${number} `);
+            number++;
+        }
+    </pre>
+    <p>Результат:</p>
+    <script>
+        let number = 2;
+        while (number <= 100) {
+            let num = 2;
+            let res = true;
+            while (num < number) {
+                if (number % num == 0) {
+                    res = false;
+                    break;
+                }
+                num++;
+            }
+            if (res)
+                document.write(`${number} `);
+            number++;
+        }
+    </script>
+</body>
+</html> 
