@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 1</h1>
+    <p>1. Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999, надо получить на выходе объект, 
+        в котором в соответствующих свойствах описаны единицы, десятки и сотни. Например, для числа 245 надо получить следующий объект: 
+        {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. 
+        Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
+    </p>
+    <pre>
+        let num = 746;
+        function num2obj(number) {
+            if (number &lt; 0 || number &gt; 999) {
+                console.log("Число должно быть в диапазоне 0 - 999.");
+                return {};
+            }
+
+            let obj = {};
+            obj["единицы"] = number % 10;
+            number = Math.trunc(number  / 10);
+            obj["десятки"] = number % 10;
+            number = Math.trunc(number  / 10);
+            obj["сотни"] = number % 10;
+
+            return obj;
+        }
+        numObj = num2obj(num);
+        console.log(numObj);
+
+    </pre>
+    <p>Результат:</p>
+    <script>
+        let num = 746;
+        function num2obj(number) {
+            if (number < 0 || number > 999) {
+                console.log("Число должно быть в диапазоне 0 - 999.");
+                return {};
+            }
+
+            let obj = {};
+            obj["единицы"] = number % 10;
+            number = Math.trunc(number  / 10);
+            obj["десятки"] = number % 10;
+            number = Math.trunc(number  / 10);
+            obj["сотни"] = number % 10;
+
+            return obj;
+        }
+        numObj = num2obj(num);
+        console.log(numObj);
+    </script>
+</body>
+</html> 

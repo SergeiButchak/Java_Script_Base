@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 2</h1>
+    <p>2. Продолжить работу с интернет-магазином:
+        В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+        Реализуйте такие объекты.
+        Перенести функционал подсчета корзины на объектно-ориентированную базу.        
+    </p>
+    <pre>
+        class ShoppingCartItem {
+            constructor(itemId, count, price) {
+                this.itemId = itemId;
+                this.count = count;
+                this.price = price;
+            }
+
+            getTotal() {
+                return this.count * this.price;
+            }
+        }   
+        
+        function countBasketPrice(cart) {
+            let res = 0;
+            for (let i = 0; i &lt; cart.length; i++) {
+                res += cart[i].getTotal();
+            }   
+            return res;     
+        }
+
+        let cart = [];
+        cart.push(new ShoppingCartItem(1, 5, 154));
+        cart.push(new ShoppingCartItem(5, 1, 1500));
+        cart.push(new ShoppingCartItem(51, 15, 67));
+        cart.push(new ShoppingCartItem(47, 7, 245));
+        cart.push(new ShoppingCartItem(99, 2, 2000));
+        document.write(countBasketPrice(cart));
+    </pre>
+    <p>Результат:</p>
+    <script>
+        class ShoppingCartItem {
+            constructor(itemId, count, price) {
+                this.itemId = itemId;
+                this.count = count;
+                this.price = price;
+            }
+
+            getTotal() {
+                return this.count * this.price;
+            }
+        }   
+        
+        function countBasketPrice(cart) {
+            let res = 0;
+            for (let i = 0; i < cart.length; i++) {
+                res += cart[i].getTotal();
+            }   
+            return res;     
+        }
+
+        let cart = [];
+        cart.push(new ShoppingCartItem(1, 5, 154));
+        cart.push(new ShoppingCartItem(5, 1, 1500));
+        cart.push(new ShoppingCartItem(51, 15, 67));
+        cart.push(new ShoppingCartItem(47, 7, 245));
+        cart.push(new ShoppingCartItem(99, 2, 2000));
+        document.write(countBasketPrice(cart));
+    </script>
+</body>
+</html> 
