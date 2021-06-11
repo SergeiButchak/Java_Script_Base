@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Практическое задание 2</h1>
+    <p>2. Сделать генерацию корзины динамической: верстка корзины не должна находиться в HTML-структуре. Там должен быть только div, в который будет вставляться корзина, сгенерированная на базе JS:
+        Пустая корзина должна выводить строку «Корзина пуста»;
+        Наполненная должна выводить «В корзине: n товаров на сумму m рублей».
+    </p>
+    <pre>
+    
+    </pre>
+    <p>Результат:</p>
+    <style>
+    </style>
+    <script>
+        class ShoppingCartItem {
+            constructor(itemId, count, price) {
+                this.itemId = itemId;
+                this.count = count;
+                this.price = price;
+            }
+
+            getTotal() {
+                return this.count * this.price;
+            }
+        }   
+
+        function countBasketPrice(cart) {
+            let res = 0;
+            for (let i = 0; i < cart.length; i++) {
+                res += cart[i].getTotal();
+            }   
+            return res;     
+        }
+
+        function countBasket(cart) {
+            let res = 0;
+            for (let i = 0; i < cart.length; i++) {
+                res += cart[i].count;
+            }   
+            return res;     
+        }
+
+        let cart = [];
+
+        let div = document.createElement("div");
+        let elem = document.createElement("div");
+        elem.setAttribute("id", "basket");
+        elem.style.width = "300px";
+        elem.style.height = "25px";
+        elem.style.border = "1px solid black";
+        elem.innerHTML = "Корзина пуста";
+        div.appendChild(elem);
+
+        elem = document.createElement("button");
+        elem.setAttribute("id", "reset");
+        elem.innerHTML = "Сброс";
+        elem.addEventListener("click", function() {
+            cart = [];
+            let bsk = document.getElementById("basket");
+            bsk.innerHTML = "Корзина пуста";
+         });
+
+        div.appendChild(elem);
+
+        div.appendChild(document.createElement("br"));
+
+        elem = document.createElement("label");
+        elem.innerHTML = "Код товара";
+        div.appendChild(elem);
+       
+        elem = document.createElement("input");
+        elem.setAttribute("id", "itemId");
+        div.appendChild(elem);
+
+        div.appendChild(document.createElement("br"));
+
+        elem = document.createElement("label");
+        elem.innerHTML = "Количество";
+        div.appendChild(elem);
+
+        elem = document.createElement("input");
+        elem.setAttribute("id", "count");
+        div.appendChild(elem);
+
+        div.appendChild(document.createElement("br"));
+
+        elem = document.createElement("label");
+        elem.innerHTML = "Цена";
+        div.appendChild(elem);
+
+        elem = document.createElement("input");
+        elem.setAttribute("id", "price");
+        div.appendChild(elem);
+
+        div.appendChild(document.createElement("br"));
+
+        elem = document.createElement("button");
+        elem.setAttribute("id", "addItem");
+        elem.innerHTML = "Добавить в корзину";
+        elem.addEventListener("click", function() {
+            let itemId = +document.getElementById("itemId").value;
+            let count = +document.getElementById("count").value;
+            let price = +document.getElementById("price").value;
+
+            if (Number.isNaN(itemId) || Number.isNaN(count) || Number.isNaN(price))
+                return;
+            if (itemId == 0 || count == 0 || price == 0)
+                return;
+
+            cart.push(new ShoppingCartItem(itemId, count, price));
+            let str = "В корзине: " + countBasket(cart) + " товаров на сумму" + countBasketPrice(cart) + " рублей";
+            let bsk = document.getElementById("basket");
+            bsk.innerHTML = str;
+        });
+        div.appendChild(elem);
+
+        document.body.appendChild(div);
+
+    </script>
+</body>
+</html> 
