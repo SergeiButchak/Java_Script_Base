@@ -93,23 +93,3 @@ drawCart();
 document.getElementById("clear_cart").addEventListener('click', clearCart);
 
 goods[0].addEventListener('click', addGood);
-
-// elem.innerHTML = "Добавить в корзину";
-// elem.addEventListener("click", function() {
-//     let itemId = +document.getElementById("itemId").value;
-//     let count = +document.getElementById("count").value;
-//     let price = +document.getElementById("price").value;
-
-//     if (Number.isNaN(itemId) || Number.isNaN(count) || Number.isNaN(price))
-//         return;
-//     if (itemId == 0 || count == 0 || price == 0)
-//         return;
-
-//     cart.push(new ShoppingCartItem(itemId, count, price));
-//     let str = "В корзине: " + countBasket(cart) + " товаров на сумму" + countBasketPrice(cart) + " рублей";
-//     let bsk = document.getElementById("basket");
-//     bsk.innerHTML = str;
-// });
-// div.appendChild(elem);
-
-// document.body.appendChild(div);
