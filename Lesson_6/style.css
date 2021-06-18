@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid grey;
+}
+
+.cart {
+    height: 50px;
+    background-color: chocolate;
+    display: flex;
+}
+
+.goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.good {
+    width: 350px;
+    border: 1px solid orangered;
+    margin: 25px auto;
+    padding: 10px;
+}
+
+.cart_cont {
+    margin: auto 10px;
+    color: palegreen;
+}
+
+#clear_cart {
+    margin: 15px 5px;
+}
